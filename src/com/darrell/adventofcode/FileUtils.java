@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class FileUtils {
 
-  public static String readFile(String remainingPath)
+  public static String[] readFile(String remainingPath)
   {
     File file = getFile(remainingPath);
     StringBuilder fileData = new StringBuilder();
@@ -21,12 +21,12 @@ public class FileUtils {
       System.out.println("File not found");
       e.printStackTrace();
     }
-    return fileData.toString();
+    return fileData.toString().split("\n");
   }
 
   private static File getFile(String remainingPath)
   {
-    String path = System.getProperty("user.dir") + "/com/darrell/adventofcode" + remainingPath;
+    String path = System.getProperty("user.dir") + "/src/com/darrell/adventofcode" + remainingPath;
     return new File(path);
   }
 

@@ -2,11 +2,10 @@ package com.darrell.adventofcode.day2;
 
 public class AnswersDay2 {
 
-  public static int task1Answer(String input)
+  public static int task1Answer(String[] input)
   {
     Position sub = new Position();
-    String[] iLines = input.split("\n");
-    for(String line: iLines)
+    for(String line: input)
     {
       String[] actions = line.split(" ");
       triggerActions(sub, actions[0], actions[1]);

@@ -1,20 +1,20 @@
 package com.darrell.adventofcode;
 
-import com.darrell.adventofcode.day2.AnswersDay2;
+import com.darrell.adventofcode.day3.AnswersDay3;
 
 public class Main {
 
     public static void main(String[] args) {
-        day2Challenges();
+        day3Challenges();
     }
 
-    private static void day2Challenges()
+    private static void day3Challenges()
     {
-        String example = FileUtils.readFile("/day2/1inputexample.txt");
-        System.out.println(AnswersDay2.task1Answer(example));
+        String[] example = FileUtils.readFile("/day3/inputexample.txt");
+        System.out.println(AnswersDay3.calculateTask1Answer(example));
 
-        String answer = FileUtils.readFile("/day2/1inputexercise.txt");
-        System.out.println(AnswersDay2.task1Answer(answer));
+        String[] exercise = FileUtils.readFile("/day3/inputexercise.txt");
+        System.out.println(AnswersDay3.calculateTask2Answer(exercise));
     }
 
 
